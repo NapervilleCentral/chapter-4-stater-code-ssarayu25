@@ -13,7 +13,7 @@ public class mathy
     public mathy( )
     {
 
-        System.out.println ("hi from default constructor" );
+        System.out.println ("hi from default constructor" ); //how and when does this print
 
     }//end of default const
 
