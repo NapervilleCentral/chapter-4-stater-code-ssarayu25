@@ -67,6 +67,10 @@ public class mathy
         return ("Hi what do you want?, I'm just Mathy");
 
     }
-
+    
+    public static void main (String args[])
+    {
+        
+    }
 
 }//end of class
