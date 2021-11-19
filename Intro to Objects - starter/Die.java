@@ -1,6 +1,5 @@
 //********************************************************************
 //  Die.java
-//
 //********************************************************************
 
 import java.util.Random;
@@ -32,40 +31,44 @@ public class Die
 
    public Die(int sides)
    {
-       if (sides > MIN_FACES)
+       if (sides >= MIN_FACES)
         numFaces = sides;
        else
         numFaces = 6;
-       faceValue = 1;
+       faceValue = generator.nextInt(numFaces) + 1;
+       
     }
+   
+    /**
+     * Copy constructor - copy info from another object
+     * @param - die object
+     */
+    public Die (Die otherObj)
+    {
+        this.numFaces = otherObj.numFaces;
+        this.faceValue = otherObj.faceValue;
+    }    
     
-
-
-
-
-
-
-
-
-
-
+    
    /**
         Rolls the die and returns the result.
-        @return
+        @return the int faceValue
    */
    public int roll ()
    {
-      faceValue = 0; // you put the correct  code here
+      
+      faceValue = generator.nextInt(numFaces) + 1; // you put the correct  code here
+      
       return faceValue;
    }
 
    /**
         Returns the current die value.
-        @return _____________________write comment
+        @return the int faceValue
    */
    public int getFaceValue ()
    {
-      return faceValue;
+       return faceValue;
    }
 
 
@@ -73,24 +76,31 @@ public class Die
         Returns the current number of faces the die has.
         @return _________________
   */
-
+  public int getNumFaces()
+  {
+      return numFaces;
+  }
 
   /**
         Sets the number of faces of the Die
         @param _________________
   */
-
-
-
+  public int setNumFaces(int sides)
+  {
+      if (sides >= MIN_FACES)
+        numFaces = sides;
+       else
+        numFaces = 6;
+       return numFaces;
+    }
+    
    /**
         Returns the current die value and number of sides as a String.
-        @return _____________
+        @return a string of current die value and number of sides as String
    */
-   public String methodName ()
+   public String toString()
    {
-      String data ="";
-
-
+      String data ="Faces: " + numFaces + "\n Face Value: "+ faceValue;
 
       return data;
    }
