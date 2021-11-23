@@ -9,4 +9,6 @@ comment2.text=\r\n\ \ \ \ \ \ \ \ take\ the\ absoulute\ value\ of\ the\ number\r
 comment3.params=
 comment3.target=java.lang.String\ toString()
 comment3.text=\r\n\ \ \ \ \ \ \ \ \ \ \ \ toString\r\n\ \ \ \ \ \ \ \ \ \ \ \ message\ from\ Mathy\ class\r\n\ \ \ \ \ \ \ \ \ \ \ \ @param\ none\r\n\ \ \ \ \ \ \ \ \ \ \ \ @return\ String\ message\r\n
-numComments=4
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5

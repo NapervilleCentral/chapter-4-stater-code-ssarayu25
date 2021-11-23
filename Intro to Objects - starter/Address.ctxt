@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Address
+comment1.params=
+comment1.target=Address()
+comment2.params=street\ town\ st\ zip
+comment2.target=Address(java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
+comment3.params=streetAdress
+comment3.target=void\ setStreet(java.lang.String)
+comment3.text=\r\n\ setStreet\ -\ will\ change\ the\ streetAdress\r\n\ @param\ String\ of\ new\ Adress\r\n
+comment4.params=obj
+comment4.target=Address(Address)
+comment4.text=\r\n\ Copy\ constructor\ -\ copy\ info\ from\ given\ adress\r\n\ @param\ -\ Address\ object\r\n
+comment5.params=obj
+comment5.target=boolean\ equals(Address)
+comment5.text=\r\n\ equals\ -\ will\ compare\ to\ other\ adress\ and\ return\ true\ if\ they\ are\ equal\r\n\ @param\ Adress\ object\r\n\ @return\ boolean\ value\r\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

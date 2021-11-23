@@ -5,7 +5,7 @@
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-
+import java.util.*;
 import javax.swing.*;
 
 public class ch4notes7_08
@@ -15,6 +15,7 @@ public class ch4notes7_08
 
     public static void main (String[] args)
     {
+        /*
         int y = -99; //local variable: scope is only within main
         mathy solver = new mathy();
     
@@ -26,7 +27,27 @@ public class ch4notes7_08
         System.out.println(y + "*");
         
         /**/
+        Address myAdress = new Address ("1519 Mya Ct", "Naperville", "IL", 60565);
+        Address otherAdress = new Address ("1519 Maya Ct", "Naperville", "IL", 6065);
+        //Address sisterAdress = myAdress;
+        Address sisterAdress = new Address(myAdress);
+        System.out.println(sisterAdress == myAdress);
+        System.out.println(sisterAdress.equals(myAdress));
+        System.out.println(sisterAdress.equals(otherAdress));
+        
+        System.out.println(myAdress);
+        newAdress(myAdress);
+        System.out.println(myAdress);
+        System.out.println(sisterAdress);
     }// end of main
+    
+    public static void newAdress (Address obj)
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.print("What is the new Adress?");
+        String updatedAdress = in.nextLine();
+        obj.setStreet(updatedAdress);
+    }
     
     /**
         take the absoulute value of the number
