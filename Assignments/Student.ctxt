@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Student
+comment1.params=first\ last\ home
+comment1.target=Student(java.lang.String,\ java.lang.String,\ Address)
+comment2.params=test\ score
+comment2.target=void\ setTestScore(int,\ double)
+comment2.text=\r\n\ Sets\ the\ test\ score\ \r\n\ @param\ int\ of\ test\ number\ and\ int\ of\ test\ score\r\n
+comment3.params=test
+comment3.target=double\ getTestScore(int)
+comment3.text=\r\n\ gets\ the\ test\ score\ \r\n\ @param\ int\ of\ test\ number\r\n\ @return\ int\ of\ test\ score\r\n
+comment4.params=
+comment4.target=double\ average()
+comment4.text=\r\n\ gets\ the\ test\ score\ \r\n\ @param\ int\ of\ test\ number\r\n\ @return\ int\ of\ test\ score\r\n
+comment5.params=obj
+comment5.target=boolean\ equals(Student)
+comment5.text=\r\n\ checks\ to\ see\ if\ two\ student\ objects\ have\ the\ same\ name\r\n\ @param\ Student\ object\r\n\ @return\ boolean\ value\r\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7
