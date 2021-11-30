@@ -61,7 +61,8 @@ public class Student
           return test2;
        else if (test == 3)
           return test3;
-       return 0;
+      else
+         return 0;
     }
     
     
