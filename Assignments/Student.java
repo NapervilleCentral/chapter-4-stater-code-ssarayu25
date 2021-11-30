@@ -106,7 +106,7 @@ public class Student
 
       result = firstName + " " + lastName + "\n";
       result += "Home Address:\n" + homeAddress + "\n";
-      result += "School Address:\n" + schoolAddress;
+      result += "School Address:\n" + schoolAddress + "\n";
       
       result+= "test score 1: " + test1 + "\n";
       result += "test score 2: " + test2 + "\n";

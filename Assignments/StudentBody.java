@@ -11,19 +11,28 @@ public class StudentBody
    //-----------------------------------------------------------------
    public static void main (String[] args)
    {
-      Address school = new Address ("800 Lancaster Ave.", "Villanova",
-                                    "PA", 19085);
 
       Address jHome = new Address ("21 Jump Street", "Lynchburg",
                                    "VA", 24551);
-      Student john = new Student ("John", "Gomez", jHome, school);
+      Student john = new Student ("John", "Gomez", jHome);
 
       Address mHome = new Address ("123 Main Street", "Euclid", "OH",
                                    44132);
-      Student marsha = new Student ("Marsha", "Jones", mHome, school);
+      Student marsha1 = new Student ("Marsha", "Jones", mHome);
+      
+      Student marsha2 = new Student ("Marsha", "Jones", mHome);
+      
+      john.setTestScore(1, 10);
+      john.setTestScore (2, 5);
+      System.out.println(john.getTestScore(2));
+      System.out.println(john.average());
+      
+      System.out.println(marsha1.equals(marsha2));
 
       System.out.println (john);
       System.out.println ();
-      System.out.println (marsha);
+      System.out.println (marsha1);
+      System.out.println();
+      System.out.println (marsha2);
    }
 }
