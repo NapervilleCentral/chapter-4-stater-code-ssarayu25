@@ -66,9 +66,8 @@ public class Student
     
     
    /**
-    * gets the test score 
-    * @param int of test number
-    * @return int of test score
+    * calculates average test score 
+    * @return int of average test score
     */
    
    public double average ()
