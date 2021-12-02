@@ -1,3 +1,4 @@
+
 //********************************************************************
 //  Banking.java       Author: Lewis/Loftus/Cocking
 //
@@ -15,6 +16,15 @@ public class Banking
       Account acct2 = new Account ("Anita Gomez", 69713, 40.00);
       Account acct3 = new Account ("Sanchit Reddy", 93757, 759.32);
 
+      
+      
+      System.out.println("Menu: ");
+      System.out.println("1 - deposit ");
+      System.out.println("2 - withdraw");
+      System.out.println("3 - transfer");
+      System.out.println("4 - exit");
+      
+      
       acct1.deposit (25.85);
 
       double gomezBalance = acct2.deposit (500.00);

@@ -29,6 +29,18 @@ public class Account
       balance = initial;
    }
 
+   
+   /**
+   * Sets up the account by defining its owner, account number,
+   *  and initial balance.
+   */
+   public Account (String owner, int account)
+   {
+      name = owner;
+      acctNumber = account;
+      balance = 0;
+   }
+   
    /**
    *  Validates the transaction, then deposits the specified amount
    *  into the account. Returns the new balance.
@@ -79,12 +91,14 @@ public class Account
    /**
    *  Asks the user for amount to transfer
    *  from one account to another.
+   *  @param Account Object
    */
-   public void transfer (/*object*/)
+   public void transfer (Account obj, double trans)
    {
-	   System.out.print("Enter amount to transfer");
-		double trans = 0; //aScannerObject.nextDouble();
-
+      if (trans < this.balance)
+        this.balance = this.balance - trans;
+        obj.balance += trans;      
+        
    }
 
    /**
@@ -96,21 +110,31 @@ public class Account
       return balance;
    }
 
-   /**
-   *  Returns the current balance of the account.
+   /** getBalance
+    * @return double current balance of the account.
    */
-
+   public double getBalance ()
+   {
+       return balance;
+    }
 
    /**
-   *  Returns the account number.
+    * getAcctNumber
+   *  @return int account number.
    */
-
+   public int getAcctNumber ()
+   {
+       return acctNumber;
+    }
 
    /**
    *  Returns a one-line description of the account as a string.
    */
    public String toString ()
    {
-      return ("supply correct data");
+       String data = "Owner: " + name + "\n";
+       data += "Account Number: " + acctNumber + "\n";
+       data += "Current Balance: " + balance + "\n";
+       return (data);
    }
 }
