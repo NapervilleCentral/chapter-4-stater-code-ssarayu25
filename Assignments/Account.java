@@ -96,7 +96,7 @@ public class Account
    public void transfer (Account obj, double trans)
    {
       if (trans < this.balance)
-        this.balance = this.balance - trans;
+        this.balance -= trans;
         obj.balance += trans;      
         
    }
