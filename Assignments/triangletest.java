@@ -6,9 +6,9 @@ public class triangletest
    //-----------------------------------------------------------------
    public static void main (String[] args)
    {
-	   triangle7 tri = new triangle7(6,6,9);
+	   triangle tri = new triangle(6,6,9);
 
-	   triangle7 tri1 = new triangle7(7,9,25);
+	   triangle tri1 = new triangle(7,9,25);
 
 	   //triangel tri2 = new triangel(tri);
 

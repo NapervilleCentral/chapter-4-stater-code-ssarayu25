@@ -29,8 +29,16 @@ public class triangle
      */
         public triangle (int x, int y, int z)
         {
-            `
-    
+            this.side1 = x;
+            this.side2 = y;
+            this.side3 = z;
+            if (!this.isValid())
+            {
+                this.side1 = - 1;
+                this.side2 = -1;
+                this.side3 = -1;
+            }
+            
         }
 
     
@@ -41,7 +49,9 @@ public class triangle
 
     public triangle(triangle obj2)
     {
-
+        this.side1 = obj2.side1;
+        this.side2 = obj2.side2;
+        this.side3 = obj2.side3;
 
     }
 
@@ -54,7 +64,10 @@ public class triangle
 
     private boolean isValid ()
     {
-        if ((side1 + side2) > side3 && (side2 + side3) > side1 && (side3 + side1)
+        if ((side1 + side2) > side3 && (side2 + side3) > side1 && (side3 + side1) > side2 && (side1 > 0) && (side2 > 0) &&(side3 > 0))
+        {
+            return true;
+        }
         return false;
 
     }
@@ -71,6 +84,10 @@ public class triangle
 
         if (side == 1)
             return side1;
+        else if (side == 2)
+            return side2;
+        else if (side == 3)
+            return side3;
         return 0;
     }
 
@@ -85,7 +102,14 @@ public class triangle
 
     {
         
-
+        if (this.isValid())
+        {
+            this.side1 = side1;
+            this.side2 = side2;
+            this.side3 = side3;
+        }
+        
+        
         
 
 
@@ -96,8 +120,9 @@ public class triangle
      */
     public boolean isEquilateral ()
     {
-
-        return true;
+        if (side1 == side2 && side2 == side3)
+            return true;
+        return false;
     }
     
     /**
@@ -105,9 +130,44 @@ public class triangle
      */
     public boolean isIsoceles()
     {
-        return true;
+        if ((side1 == side2) || (side2 == side3) || (side3 == side1))
+            return true;
+        return false;
     }
 
+    
+    
+    /**
+     * 
+     */
+    public boolean isRight()
+    {
+        int hyp = 0, leg1 = 0, leg2 = 0;
+        if (side1 > side2 && side1 > side3)
+        {
+            hyp = side1;
+            leg1 = side2;
+            leg2 = side3;
+        }
+        else if (side2 > side1 && side2 > side3)
+        {
+            hyp = side2;
+            leg1 = side1;
+            leg2 = side3;
+        }
+        else if (side3 > side1 && side3 > 2)
+        {
+            hyp = side3;
+            leg1 = side1;
+            leg2 = side2;
+        }
+        
+        
+        if (hyp*hyp == ((leg1*leg1) + (leg2*leg2)))
+            return true;
+        return false;
+    }
+    
     /**
     /*Returns all three sides with , between
     */
@@ -115,12 +175,14 @@ public class triangle
     {
         String sides;
 
-		sides = "Side 1, " +side1 + "\n";
+        sides = "Side 1: " +side1 + ", ";
+        sides += "Side 2: " + side2 + ", ";
+        sides += "Side 3: " + side3 + ", ";
 
-		return sides;
+        return sides;
 
 
-	}
+    }
 
 
 
