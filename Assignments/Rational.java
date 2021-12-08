@@ -67,7 +67,13 @@ public class Rational
    *  ----------------------------------------------------------------
    */
    public Rational add (Rational op2)
-   {}
+   {
+       int num = (this.numerator * op2.denominator) + (op2.numerator * this.denominator);
+       int den = (this.denominator * op2.denominator);
+       Rational answer = new Rational(num,den);
+       answer.reduce();
+       return answer;
+    }
        
    
 
@@ -78,7 +84,11 @@ public class Rational
    */
    public Rational subtract (Rational op2)
    {
-
+       int num = (this.numerator * op2.denominator) - (op2.numerator * this.denominator);
+       int den = (this.denominator * op2.denominator);
+       Rational answer = new Rational(num,den);
+       answer.reduce();
+       return answer;
    }
 
    /**----------------------------------------------------------------
@@ -88,7 +98,11 @@ public class Rational
    */
    public Rational multiply (Rational op2)
    {
-
+        int num = this.numerator * op2.numerator;
+        int den = this.denominator * op2.denominator;
+        Rational answer = new Rational(num, den);
+        answer.reduce();
+        return answer;
    }
 
    /**----------------------------------------------------------------
@@ -98,6 +112,11 @@ public class Rational
    */
    public Rational divide (Rational op2)
    {
+       int num = this.numerator * op2.denominator;
+       int den = this.denominator * op2.numerator;
+       Rational answer = new Rational(num, den);
+        answer.reduce();
+        return answer;
    }
 
    /**----------------------------------------------------------------
@@ -107,7 +126,11 @@ public class Rational
    */
    public boolean equals (Rational op2)
    {
-
+        this.reduce();
+        op2.reduce();
+        if (this.numerator == op2.numerator && this.denominator == op2.denominator)
+            return true;
+        return false;
    }
 
    /**----------------------------------------------------------------
@@ -117,7 +140,7 @@ public class Rational
    public String toString ()
    {
       String result = "";
-
+      result += numerator + "/" + denominator;
 
       return result;
    }
