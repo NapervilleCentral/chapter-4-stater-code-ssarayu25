@@ -10,15 +10,15 @@ public class triangletest
 
 	   triangle tri1 = new triangle(7,9,25);
 
-	   //triangel tri2 = new triangel(tri);
+	   triangle tri2 = new triangle(tri);
 
 		System.out.println("Tri1 is " +tri1);
 		System.out.println("Tri is  " + tri);
 
-		//System.out.println("Side 2 of Tri is " + tri.getSide(2));
+		System.out.println("Side 2 of Tri is " + tri.getSide(2));
 
 
-		//System.out.println("Tri is a iso triangle = " +tri.isIsosceles());
+		System.out.println("Tri is a iso triangle = " +tri.isIsoceles());
 
 
    }//end of main

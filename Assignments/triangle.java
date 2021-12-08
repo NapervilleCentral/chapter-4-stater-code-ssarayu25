@@ -44,7 +44,7 @@ public class triangle
     
     /**
      * Constructor(triangle): takes a triangle as an agument
-     * 
+     * @param triangle object
      */
 
     public triangle(triangle obj2)
@@ -60,7 +60,8 @@ public class triangle
 
     /**
     /* returns true if valid triangle and no side is 0
-    */
+     * @returns boolean of whether triangle is valid
+     */
 
     private boolean isValid ()
     {
@@ -77,6 +78,9 @@ public class triangle
     /**
      * getSide- will take a side 1-3 and return the value for that side
      * if ! 1-3 returns -1
+     * 
+     * @param int of side number
+     * @returns int of length of the side 
      */
     
     public int getSide(int side)
